@@ -9,6 +9,7 @@ internal class Three
         Console.Write("input a number: ");
         int input = int.Parse(Console.ReadLine()!);
 
-        Console.WriteLine($"your number is {(input << sizeof(int) * 8 - 1 == 0 ? "even" : "odd")}");
+        Console.WriteLine($"your number is {(input == (input | 1) ? "odd" : "even")}");
+
     }
 }
