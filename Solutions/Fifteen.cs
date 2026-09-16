@@ -9,8 +9,8 @@ internal class Fifteen
 
         string state = temperature switch
         {
-            var x when x <= 32 => "freezing",
-            var x when x >= 212 => "boiling",
+            <= 32 => "freezing",
+            >= 212 => "boiling",
             _ => "between freezing and boiling",
         };
 
